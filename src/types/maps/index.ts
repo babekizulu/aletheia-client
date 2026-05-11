@@ -1,7 +1,7 @@
 import type { ReactNode, Dispatch, SetStateAction } from "react"
 
-export type Logistics = {
+export type Maps = {
     children: ReactNode;
-    data: string;
-    setData: Dispatch<SetStateAction<string>>;
+    data: number;
+    setData: Dispatch<SetStateAction<number>>;
 }

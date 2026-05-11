@@ -1,14 +1,17 @@
 //libs
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import type { Prediction } from "../../types/ai";
+import type { Props } from "../../types/common";
 
 const PredictionContext = createContext<Prediction | undefined>(undefined);
 
-const value: Prediction {
-    children
-}
-
-function Provider({children}) {
+function Provider({children}: Props) {
+    const [prediction, setPrediction] = useState('');
+    const value: Prediction = {
+        children,
+        prediction,
+        setPrediction
+    }
     return (
         <PredictionContext.Provider value={value}>
             {children}

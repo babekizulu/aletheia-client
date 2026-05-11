@@ -1,6 +1,6 @@
 //libs
-import {createRoot} from 'react-dom/client';;
-import { createBrowserRouter } from 'react-router';
+import {createRoot} from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 //components
 import App from './App';
 //context
@@ -31,4 +31,74 @@ if (!container) {
 }
 const root = createRoot(container);
 
-root.render(<GlobalProvider><App/></GlobalProvider>);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: App,
+    children: [
+      {index: true, Component: LandingPage},
+      {
+        path: "sign-in",
+        Component: SignIn
+      },
+      {
+        path: "sign-up",
+        Component: SignUp
+      },
+      {
+        path: "dashboard",
+        Component: Dashboard
+      },
+      {
+        path: "compliance",
+        Component: Compliance
+      },
+      {
+        path: "finance",
+        Component: Finance
+      },
+      {
+        path: "help",
+        Component: Help
+      },
+      {
+        path: "logistics",
+        Component: Logistics
+      },
+      {
+        path: "market",
+        Component: Market
+      },
+      {
+        path: "preferences",
+        Component: Preferences
+      },
+      {
+        path: "profile",
+        Component: Profile
+      },
+      {
+        path: "Reputation",
+        Component: Reputation
+      },
+      {
+        path: "safety",
+        Component: Safety
+      },
+      {
+        path: "settings",
+        Component: Settings
+      },
+      {
+        path: "supply-chain",
+        Component: SupplyChain
+      },
+      {
+        path: "education",
+        Component: Education
+      }
+    ]
+  }
+])
+
+root.render(<GlobalProvider><RouterProvider router={router}/></GlobalProvider>);
