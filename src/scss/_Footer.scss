@@ -1,0 +1,30 @@
+//imports
+@import 'utils';
+
+.footer {
+    @include flex-row;
+    position: fixed;
+    bottom: 0;
+    right: 300px;
+    height: 20px;
+    width: calc(100% - 366px);
+    font-family: $gsans;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-top: 1px solid $light-active;
+    border-right: 1px solid $light-active;
+    background-color: $light;
+    z-index: 1;
+
+    p {
+        margin-left: 0.2rem;
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 0;
+        margin: 0 0.5rem;
+    }
+}

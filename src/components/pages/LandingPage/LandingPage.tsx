@@ -1,6 +1,6 @@
 function LandingPage() {
     return (
-        <section>
+        <section className='page landing-page'>
             Landing Page
         </section>
     )

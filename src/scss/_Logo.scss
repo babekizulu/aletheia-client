@@ -1,0 +1,10 @@
+//imports
+@import 'utils';
+
+.logo {
+    @include flex-between;
+    text-decoration: none;
+    font-family: $int;
+    font-weight: 400;
+    color: $navy;
+}

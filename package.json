@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@project-osrm/osrm": "^26.5.0",
+    "@recharts/devtools": "^0.0.13",
     "@tanstack/react-query": "^5.100.9",
     "axios": "^1.16.0",
     "keycloak-js": "^26.2.4",

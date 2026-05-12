@@ -1,0 +1,115 @@
+//mixins
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin wh100 {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@mixin grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@mixin grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@mixin grid4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+//fonts
+$int: 'Inter', sans-serif;
+$rob: 'Roboto', sans-serif;
+$osans: 'Open Sans', sans-serif;
+$gsans: 'Google Sans', sans-serif;
+$wsans: 'Work Sans', sans-serif;
+//colors
+$light: #fff;
+$light-active: #d6d6d6;
+$dark: #131313;
+$dark-active: #353535;
+$primary: #ffd8ab;
+$primary-active: #c9975b;
+$navy: #00223f;
+$navy-active: #004683;
+$danger: rgb(240, 61, 61);
+//transitions
+$e: all 0.2s ease;
+$ei: all 0.2s ease-in;
+$eio: all 0.2s ease-in-out;
+$eioslow: all 0.25s ease-in-out;
+$eo: all 0.2s ease-out;
+//breakpoints

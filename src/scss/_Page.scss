@@ -1,0 +1,10 @@
+//libs
+@import 'utils';
+
+.page {
+    position: relative;
+    top: 60px;
+    left: 64px;
+    width: calc(100% - 364px);
+    height: 100%;
+}

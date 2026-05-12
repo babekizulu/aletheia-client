@@ -7,6 +7,7 @@ function Logo() {
     return (
         <NavLink to='/' className='logo'>
             <img src={logo}/>
+            <h1>thoth*</h1>
         </NavLink>
     )
 }
