@@ -49,6 +49,13 @@
     align-items: center;
     text-align: center;
 }
+@mixin flex-column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
 
 @mixin flex-column-between {
     display: flex;
@@ -106,6 +113,7 @@ $primary-active: #c9975b;
 $navy: #00223f;
 $navy-active: #004683;
 $danger: rgb(240, 61, 61);
+$success: rgb(59, 189, 59);
 //transitions
 $e: all 0.2s ease;
 $ei: all 0.2s ease-in;

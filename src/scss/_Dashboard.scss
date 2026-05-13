@@ -7,6 +7,12 @@
     left: 0;
     width: 100%;
     border-bottom: 1px solid $light-active;
+    background-color: $dark;
+    color: $light;
+
+    h1 {
+        margin: 1rem;
+    }
 }
 
 .quandrant-i {
@@ -18,15 +24,18 @@
 .quandrant-ii {
     width: 100%;
     height: 100%;
+    background-color: rgb(247, 102, 102);
 }
 
 .quandrant-iii {
     border-right: 1px solid $light-active;
     width: 100%;
     height: 100%;
+    background-color: rgb(48, 143, 187);
 }
 
 .quandrant-iv {
     width: 100%;
     height: 100%;
+    background-color: rgb(255, 196, 0);
 }

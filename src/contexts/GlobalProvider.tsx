@@ -8,6 +8,7 @@ import {Provider as AnalyticsProvider} from './analytics/AnalyticsContext';
 import {Provider as AuthProvider} from './auth/AuthContext';
 import {Provider as CommunityProvider} from './community/CommunityContext';
 import {Provider as ComplianceProvider} from './compliance/ComplianceContext';
+import {Provider as DashboardProvider} from './dashboard/DashboardContext';
 import {Provider as CertificationProvider} from './education/CertificationContext';
 import {Provider as EducationProvider} from './education/EducationContext';
 import {Provider as FinanceProvider} from './finance/FinanceContext';
@@ -42,6 +43,7 @@ function GlobalProvider({ children }: Props) {
           <ToastProvider>
             <ModalProvider>
               <SidebarProvider>
+                <DashboardProvider>
                 <SocketProvider>
                   <NotificationsProvider>
                     <LanguageProvider>
@@ -95,6 +97,7 @@ function GlobalProvider({ children }: Props) {
                     </LanguageProvider>
                   </NotificationsProvider>
                 </SocketProvider>
+                </DashboardProvider>
               </SidebarProvider>
             </ModalProvider>
           </ToastProvider>

@@ -1,0 +1,19 @@
+.simple-metric-card {
+    @include flex-column-left;
+    padding: 1.4rem;
+}
+
+.metric-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.metric-quantity {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.metric-increase-rate {
+    color: $success;
+}

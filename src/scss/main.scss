@@ -7,6 +7,7 @@
 
 body {
     @include wh100;
+    font-family: $gsans;
 }
 
 .app {
@@ -17,6 +18,7 @@ body {
 @import 'AuxillarySidebar';
 @import 'Buttons';
 @import 'Dashboard';
+@import 'DataVisualization';
 @import 'Finance';
 @import 'Footer';
 @import 'Header';
