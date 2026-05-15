@@ -1,7 +1,7 @@
 //libs
 import { createContext, useState, useEffect } from "react";
 import axios from 'axios';
-import type { Props} from "../../types/common";
+import type { Props, ObjectArray} from "../../types/common";
 import type { Dashboard } from "../../types/dashboard";
 //import type { DonutChartProps } from "../../types/data-visualization";
 
@@ -29,16 +29,18 @@ function Provider({children}: Props) {
                         value: 10
                     }
                 ]);
+    const [jobsList, setJobsList] = useState<ObjectArray>([]);
     //variables
-    const baseURL = 'https://thoth.saerbridge.com';
+    const baseURL = import.meta.env.VITE_PRODUCTION_URL || import.meta.env.VITE_DEVELOPMENT_URL;
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${baseURL}/dashboard`);
+                const res = await axios.get(`/${baseURL}/dashboard`);
                 const {data} = res;
                 setNumberOfBusinesses(data.numberOfBusinesses);
                 setNewBusinessRate(data.newBusinessRate);
-                //setIndustries(industriesData);
+                setIndustries(data.industries);
+                setJobsList(data.jobsList);
             } catch (err) {
                 console.error(err);
             }
@@ -54,7 +56,9 @@ function Provider({children}: Props) {
         newBusinessRate,
         setNewBusinessRate,
         industries,
-        setIndustries
+        setIndustries,
+        jobsList,
+        setJobsList
     }
 
     return (
